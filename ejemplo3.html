@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SlideUp</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  
+  <style> 
+  #panel, #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #1ab2ff;
+      border: solid 1px #000033;
+  }
+
+  #panel {
+      padding: 50px;
+  }
+  </style>
+
+</head>
+<body>
+ 
+  <div id="flip">Clickea para que suba el panel</div>
+  <div id="panel">Hola</div>
+
+  <script> 
+    $(document).ready(function(){
+        $("#flip").click(function(){
+          $("#panel").slideUp("fast");
+        });
+    });
+  </script>
+
+</body>
+</html>

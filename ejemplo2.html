@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <style>
+    div
+    {
+      background:blue;
+      height:100px;
+      width:100px;  
+    }
+    
+  </style>
+</head>
+<body>
+  
+  <p><button id="play">Cliquea</button></p>
+
+  <div></div>
+
+  <script> 
+    $(document).ready(function(){
+        $("#play").click(function(){
+            var div = $("div");  
+            div.animate({height: 300}, "slow");
+            div.animate({width: 300}, "slow");
+            div.queue(function () {
+                div.css("background-color", "red");  
+                div.dequeue();
+            });
+            div.animate({height: 100}, "slow");
+            div.animate({width: 100}, "slow");
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fade</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <style>
+    
+    #d1 
+    {
+      display: inline-block;
+      width:80px;
+      height:80px;
+      background-color:red;
+
+    }
+    
+    #d2
+    {
+      display: inline-block;
+      width:80px;
+      height:80px;
+      background-color:green;
+      margin-left: 20px;
+    }
+
+    #d3
+    {
+      display: inline-block;
+      width:80px;
+      height:80px;
+      background-color:blue;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+<p>Efectos Fade, clique cualquier cuadrante!</p>
+
+  <div id='d1'>
+    
+  </div>
+  <div id='d2'>
+
+  </div>
+  <div id='d3'>
+    
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $("#d1").click(function(){
+          $(this).fadeTo("slow", 0.15);
+      });
+
+      $("#d2").click(function(){
+        $(this).fadeOut("slow");
+      });
+      
+      $("#d3").click(function(){
+        $(this).fadeTo("slow", 0.6);
+      }); 
+    });
+  </script>
+</body>
+</html>
